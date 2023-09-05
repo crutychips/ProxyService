@@ -12,7 +12,7 @@ def proxy_view(request, url):
     rules = json.loads(redis_client.get('routing_rules'))
     
     # Find the target URL using provided routing rules
-    target_url = rules.get(request.path, "http://default-legacy-service-url.com")
+    target_url = rules.get(request.path)
     
     # Forward the request to target service and return response
     response = httpx.request(request.method, target_url, data=request.body)
