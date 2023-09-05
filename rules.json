@@ -1,0 +1,4 @@
+{
+    "/endpoint1": "http://microservice-url1.com",
+    "/endpoint2": "http://microservice-url2.com"
+}
