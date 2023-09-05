@@ -5,7 +5,7 @@ import httpx
 
 from django.http import JsonResponse, HttpResponse
 
-def proxy_view(request):
+def proxy_view(request, url):
     redis_client = redis.StrictRedis(host=settings.REDIS_HOST, port=settings.REDIS_PORT, db=0)
     
     # Load routing rules from Redis
