@@ -1,4 +1,5 @@
 import json
+from django.conf import settings
 import redis
 import httpx
 
